@@ -40,7 +40,7 @@ cc_binary {
         "libhidlbase",
         "liblog",
         "libutils",
-        "vendor.lineage.powershare@1.0",
+        "vendor.xperience.powershare@1.0",
     ],
     proprietary: true,
 }
