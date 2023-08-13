@@ -24,4 +24,5 @@ interface ITouchFeature {
     getTouchModeDefValue(int32_t mode) generates (int32_t result);
     resetTouchMode(int32_t mode) generates (int32_t result);
     getModeValues(int32_t mode) generates (vec<int32_t> result);
+    setEdgeMode(uint32_t mode, uint32_t length, vec<uint32_t> value) generates(int32_t val); // error is val != 0
 };

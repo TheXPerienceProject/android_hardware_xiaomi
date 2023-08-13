@@ -12,7 +12,15 @@ interface ITouchFeature {
     getModeMaxValue(int32_t touchId, int32_t ControlMode) generates (int32_t result);
     getModeMinValue(int32_t touchId, int32_t ControlMode) generates (int32_t result);
     getModeValue(int32_t touchId, int32_t mode) generates (vec<int32_t> result);
+    getModeValues(uint32_t touchId, uint32_t mode) generates (vec<uint32_t> val);
+    setTouchMode(uint32_t touchId, uint32_t mode, uint32_t value) generates (int32_t val);
+    getTouchModeCurValue(uint32_t touchId, uint32_t mode) generates (int32_t val);
+    getTouchModeMaxValue(uint32_t touchId, uint32_t mode) generates (int32_t val);
+    getTouchModeMinValue(uint32_t touchId, uint32_t mode) generates (int32_t val);
+    getTouchModeDefValue(uint32_t touchId, uint32_t mode) generates (int32_t val);
     modeReset(int32_t touchId, int32_t ControlMode) generates (int32_t result);
+    resetTouchMode(uint32_t touchId, uint32_t mode) generates (uint32_t val);
+    setEdgeMode(uint32_t touchId, uint32_t mode, uint32_t length, vec<uint32_t> value) generates(int32_t val); // error is val != 0
     setModeLongValue(int32_t touchId, int32_t ControlMode, uint32_t ValueLen, vec<int32_t> ValueBuf) generates (int32_t result);
     setModeValue(int32_t touchId, int32_t ControlMode, int32_t ModeValue) generates (int32_t result);
 };
